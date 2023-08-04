@@ -4,7 +4,9 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
 }
 
 div {
@@ -14,7 +16,9 @@ div {
   border: solid black 0.5px;
   padding: 2em;
   background-color: lightsteelblue;
+  min-height: 83vh;
   max-height: 83vh;
+  justify-content: space-evenly;
 }
 
 ul {
@@ -36,7 +40,6 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  min-height: 83vh;
 }
 
 textarea {
@@ -45,4 +48,8 @@ textarea {
 
 label {
   font-weight: bold;
+}
+
+a {
+  padding: 1em;
 }
