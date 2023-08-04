@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  ul
+    each val in messages.length ? messages : ['There are no values']
+      li
+        p= val.user
+        p= val.added 
+        p= val.text
