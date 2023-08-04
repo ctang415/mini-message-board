@@ -18,6 +18,11 @@ const messages = [
     text: "What's up everyone?",
     user: "Brandon",
     added: new Date()
+  },
+  {
+    text: "What's going on here? :)",
+    user: "Timmy",
+    added: new Date()
   }
 ];
 
@@ -28,5 +33,14 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: "Mini Messageboard", messages: messages })
 });
+
+router.get('/new', function (req, res, next) {
+  res.render('form', { title: "Post a New Message"})
+})
+
+router.post('/new', function (req, res, next) {
+  messages.push({ text: req.body.messageText, user: req.body.messageUser, added: new Date()})
+  res.redirect('/')
+})
 
 module.exports = router;
